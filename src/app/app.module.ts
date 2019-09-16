@@ -43,7 +43,7 @@ import { SupplierComponent } from './supplier/supplier.component';
    ],
    providers: [AuthguardService,LoginService],
    bootstrap: [
-     AppComponent
+     AppComponent,PostComponent 
    ]
 })
 export class AppModule { }
