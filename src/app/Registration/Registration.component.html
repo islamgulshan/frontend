@@ -1,0 +1,11 @@
+<div class="container">
+  <form action="" [formGroup]="registrationForm">
+    <div class="col-12">
+      <label for="">Name:</label>
+      <input type="text" formControlName="name" class="form-control">
+    </div>
+    <div class="col-12">
+        <input type="button" (click)="onSubmit(registrationForm.value)" value="submit" class="btn btn-success">
+      </div>
+  </form>
+</div>
