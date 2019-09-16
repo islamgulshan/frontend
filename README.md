@@ -1,27 +1,49 @@
-# AssignmentFrontend
+# Inventory System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
+Path By Heroku UI Path
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Login
 
-## Code scaffolding
+ 
+ ### Login
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+https://assignment-front-app.herokuapp.com/login
+```
 
-## Build
+```
+Username : islam.gulshan2@yopmail.com
+Password : 123456
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Validation of data from live heroku Server
+and validation message
+Dashboard page and add supplier page are not accessing directly
+Login menu disappear with login and logout Show and menu Changes
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Dashboar After Login 
 
-## Running end-to-end tests
+```
+https://assignment-front-app.herokuapp.com/dashboard
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Add New  Supplier
 
-## Further help
+```
+https://assignment-front-app.herokuapp.com/addsupplier
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+All Crud Operation in Add Supplier Page
+
+Add supplier with validation
+
+Edit  supplier with validation
+
+Delete Supplier
+
+Service and data are Call from live heroku  serve
+
+
+### Login Out page 
