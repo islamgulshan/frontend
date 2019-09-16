@@ -4,9 +4,11 @@ import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 import { RegistrationComponent } from './Registration/Registration.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
    declarations: [
+      AppComponent,
       RegistrationComponent
    ],
    imports: [
@@ -14,6 +16,7 @@ import { RegistrationComponent } from './Registration/Registration.component';
    ],
    providers: [],
    bootstrap: [
+     AppComponent,
      RegistrationComponent
    ]
 })
