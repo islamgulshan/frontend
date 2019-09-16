@@ -1,11 +1,80 @@
+  
+ 
 <div class="container">
-  <form action="" [formGroup]="registrationForm">
-    <div class="col-12">
-      <label for="">Name:</label>
-      <input type="text" formControlName="name" class="form-control">
-    </div>
-    <div class="col-12">
-        <input type="button" (click)="onSubmit(registrationForm.value)" value="submit" class="btn btn-success">
+    <h2 class="text-center">Login</h2>
+    <div class="container mt-3">
+        <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password.</div>
+        
+      <form [formGroup]= "loginform" >
+       
+       <!-- Email Section  -->
+        <div class="form-group row">
+          <label  class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+        <input
+            formControlName="email"
+        type="text"
+        
+            class="form-control"
+            name="email"
+            id="email"
+        
+          />
+            <div *ngIf="email.touched && email.invalid" class="alert alert-danger">
+          <div *ngIf="email.errors.required" class="alert alert-danger">
+              please enter email 
+            </div>
+            <div *ngIf="email.errors.pattern" class="alert alert-danger">
+              please enter valid email address
+            </div>
+        </div>
+       
+        </div>
       </div>
-  </form>
-</div>
+       <!-- Section Name -->
+       <div class="form-group row">
+          <label  class="col-sm-2 col-form-label">Password</label>
+          
+        <div class="col-sm-10">
+        <input 
+        formControlName="password"
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+           
+          />
+        <div *ngIf="password.touched && password.invalid" class="alert alert-danger">
+          <div *ngIf="password.errors.required" class="alert alert-danger">
+              please enter password
+            </div>
+            <div *ngIf="password.errors.minlength" class="alert alert-danger">
+              please enter mini 5 charators
+            </div>
+        </div>
+        </div>
+        </div>
+      
+      
+     
+      
+      
+    
+        <!-- Submit Button -->
+        <div class="form-group">
+          <div class="text-right">
+        
+        
+       
+         <button  [disabled]="loginform.pristine || loginform.invalid"  class="btn btn-success" (click)="login()">
+            Login
+          </button>
+        
+      </div>
+        
+        </div>
+      </form>
+    
+    </div>
+    </div>
+    

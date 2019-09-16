@@ -1,0 +1,13 @@
+<nav class="nav nav-pills"> 
+    <a class="nav-link" routerLink="dashboard" routerLinkActive="active" >Dashboard</a>
+    <a class="nav-link" routerLink="addsupplier" routerLinkActive="active" *ngIf="auth.loggedIn" >Add New Supplier</a>
+    <a class="nav-link" routerLink="login" routerLinkActive="active" *ngIf="!auth.loggedIn" >Login</a>
+    <a class="nav-link" (click)="logout()" href="#" *ngIf="auth.loggedIn">Logout</a> 
+  </nav>
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+  
+ 
